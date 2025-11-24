@@ -4,85 +4,135 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mentorship Framework Portfolio</title>
+    <meta name="description" content="A clean, responsive mentorship framework and mentee profile examples to help you find and work with mentors." />
     <style>
+        :root{
+            --bg:#f6f8fb;
+            --muted:#64748b;
+            --accent:#6366f1;
+            --accent-2:#4f46e5;
+            --card:#ffffff;
+            --radius:14px;
+            --maxw:1100px;
+            --container-padding:24px;
+        }
+        *{box-sizing:border-box}
         body {
             margin: 0;
-            font-family: "Inter", sans-serif;
-            background: #f5f7fa;
-            color: #1f2937;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: var(--bg);
+            color: #0f172a;
+            -webkit-font-smoothing:antialiased;
         }
-        header {
-            padding: 4rem 2rem;
-            text-align: center;
-            background: linear-gradient(135deg, #4f46e5, #6366f1);
-            color: white;
-        }
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-        header p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-            opacity: 0.9;
-        }
-        section {
-            padding: 3rem 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-        .card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 16px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-            margin-bottom: 1.5rem;
-        }
-        ul {
-            margin: 0;
-            padding-left: 1.2rem;
-        }
-        li {
-            margin-bottom: 0.6rem;
-            line-height: 1.5;
+        .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--container-padding)}
+        nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+        .brand{display:flex;gap:12px;align-items:center}
+        .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+        .nav-links a{color:var(--muted);text-decoration:none;margin-left:14px;font-weight:600}
+        header.hero{background:linear-gradient(135deg,var(--accent-2),var(--accent));color:white;padding:64px 0;border-radius:18px;margin-bottom:24px}
+        .hero-content{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center}
+        .hero h1{font-size:2.2rem;margin:0 0 12px;font-weight:800}
+        .hero p{margin:0 0 20px;color:rgba(255,255,255,0.92);line-height:1.5}
+        .cta{display:inline-block;background:white;color:var(--accent);padding:12px 18px;border-radius:12px;font-weight:700;text-decoration:none}
+        .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(15,23,42,0.06)}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
+        h2{margin:0 0 12px;font-size:1.125rem}
+        ul{margin:0;padding-left:1.1rem;color:var(--muted)}
+        li{margin-bottom:8px}
+        footer{padding:30px 0;color:var(--muted);font-size:0.95rem}
+        @media (max-width:880px){
+            .hero-content{grid-template-columns:1fr}
+            .logo{width:40px;height:40px}
+            .hero h1{font-size:1.6rem}
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Framework for Exploring Topics & Finding a Mentor</h1>
-        <p>A structured approach for developing professional and personal growth through mentorship—starting with actionable small wins.</p>
-    </header>
+    <div class="wrap">
+        <nav>
+            <div class="brand">
+                <div class="logo">M</div>
+                <div>
+                    <div style="font-weight:800">Mentorship</div>
+                    <div style="font-size:12px;color:var(--muted);margin-top:2px">Framework & Mentee Profiles</div>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="mentee-framework.html">Mentee Framework</a>
+                <a href="mentee-profile.html">Mentee Profile</a>
+            </div>
+        </nav>
 
-    <section>
-        <a href="mentee-profile.html" style="text-decoration:none;background:#4f46e5;color:white;padding:0.7rem 1.2rem;border-radius:10px;font-weight:500;display:inline-block;margin-bottom:1.5rem;">View Mentee Profile</a>
-        <div class="card">
-            <h2>Mentorship Exploration Framework</h2>
-            <ul>
-                <li>Identify 3 areas you want to develop professionally.</li>
-                <li>Define 2 personal growth topics you'd like guidance on.</li>
-                <li>List people you admire and what qualities you want to learn from them.</li>
-                <li>Create a short description of the type of mentor you believe you need.</li>
-                <li>Draft 5 questions you would ask a potential mentor.</li>
-            </ul>
-        </div>
+        <header class="hero">
+            <div class="wrap hero-content">
+                <div>
+                    <h1>Turn curiosity into progress with a simple mentorship framework</h1>
+                    <p>Use structured prompts to find focus, prepare to approach mentors, and turn conversations into action. Start small, ship often.</p>
+                    <a class="cta" href="mentee-framework.html">Open the Framework</a>
+                </div>
 
-        <div class="card">
-            <h2>Small Wins You Can Achieve Today</h2>
-            <ul>
-                <li>Write a one-page reflection on your current strengths and goals.</li>
-                <li>Reach out to one person for an informational chat.</li>
-                <li>Journal about a challenge and what advice you'd want from a mentor.</li>
-                <li>Update your LinkedIn headline to reflect your direction.</li>
-                <li>Set a 30-day learning goal and outline 3 steps to reach it.</li>
-            </ul>
-        </div>
-    </section>
+                <div class="card" style="background:rgba(255,255,255,0.06);color:white">
+                    <h2 style="color:white">Quick Start</h2>
+                    <ul style="color:rgba(255,255,255,0.9);padding-left:1rem">
+                        <li>Pick 3 focus areas</li>
+                        <li>Draft a 60-second mentor intro</li>
+                        <li>List two specific asks for a first chat</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="card">
+                <h2>Exploration Framework</h2>
+                <div class="grid">
+                    <div>
+                        <h3 style="margin:0 0 8px">Define Focus</h3>
+                        <p style="margin:0 0 12px;color:var(--muted)">Choose 3 professional and 2 personal areas you want to improve. Be specific.</p>
+                        <ul>
+                            <li>Example: analytics—Power Query & modeling</li>
+                            <li>Example: communication—presenting with clarity</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 style="margin:0 0 8px">Mentor Criteria</h3>
+                        <p style="margin:0 0 12px;color:var(--muted)">Write 5 qualities you value in a mentor to narrow your search.</p>
+                        <ul>
+                            <li>Structured feedback</li>
+                            <li>Experience in desired role</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 style="margin:0 0 8px">Small Wins</h3>
+                        <p style="margin:0 0 12px;color:var(--muted)">Short, achievable steps to build momentum.</p>
+                        <ul>
+                            <li>Send one outreach message this week</li>
+                            <li>Create a 30-day learning plan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="height:18px"></div>
+
+            <div class="card">
+                <h2>Next Actions</h2>
+                <ul>
+                    <li>Download or copy the mentee framework and fill it in.</li>
+                    <li>Prepare a short ask and reach out to one potential mentor.</li>
+                    <li>Reflect weekly and iterate the plan.</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <div class="wrap">
+                <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+                    <div>Built with care • Use this as a starting point</div>
+                    <div style="margin-top:6px">© 2025</div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

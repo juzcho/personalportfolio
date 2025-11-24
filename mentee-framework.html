@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mentee Framework</title>
+    <meta name="description" content="A structured, printable template to build a mentee profile and plan mentor outreach." />
+    <style>
+        :root{--bg:#f7fbff;--muted:#536277;--accent:#4f46e5;--card:#fff;--radius:12px;--maxw:980px}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto;background:var(--bg);color:#09121a}
+        .wrap{max-width:var(--maxw);margin:0 auto;padding:24px}
+        header{padding:28px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#6366f1);color:white;margin-bottom:18px}
+        h1{margin:0;font-size:1.4rem}
+        p.lead{margin:8px 0 0;color:rgba(255,255,255,0.95)}
+        .card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.06);margin-bottom:14px}
+        label{display:block;font-weight:700;margin-bottom:6px}
+        textarea,input[type=text]{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef8;background:#fbfdff;color:#0f172a}
+        .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+        .muted{color:var(--muted)}
+        .actions{display:flex;gap:10px;align-items:center}
+        a.btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+        @media(max-width:700px){.row{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <header class="wrap">
+        <h1>Mentee Profile Framework</h1>
+        <p class="lead">A practical template to capture your goals, strengths, mentor ask and next steps. Copy or print.</p>
+    </header>
+
+    <main class="wrap">
+        <div class="card">
+            <label for="name">Name & role</label>
+            <input id="name" type="text" placeholder="e.g. Jane Doe — Product Analyst" />
+        </div>
+
+        <div class="card">
+            <label for="focus">Focus Areas (3 professional, 2 personal)</label>
+            <textarea id="focus" rows="4" placeholder="1. \n2. \n3. \n4. \n5."></textarea>
+        </div>
+
+        <div class="card row">
+            <div>
+                <label for="strengths">Strengths</label>
+                <textarea id="strengths" rows="4" placeholder="What do you do well?"></textarea>
+            </div>
+            <div>
+                <label for="challenges">Current Challenges</label>
+                <textarea id="challenges" rows="4" placeholder="What's blocking progress?"></textarea>
+            </div>
+        </div>
+
+        <div class="card">
+            <label for="mentor-pref">Mentor Preferences</label>
+            <textarea id="mentor-pref" rows="3" placeholder="Style, availability, industry, tone"></textarea>
+        </div>
+
+        <div class="card row">
+            <div>
+                <label for="ask">First Ask (1-2 sentences)</label>
+                <textarea id="ask" rows="3" placeholder="What you'll ask in first meeting"></textarea>
+            </div>
+            <div>
+                <label for="questions">Top 5 Questions to Ask a Mentor</label>
+                <textarea id="questions" rows="3" placeholder="1. \n2. \n3. \n4. \n5."></textarea>
+            </div>
+        </div>
+
+        <div class="card">
+            <label for="plan">30-day Plan (3 steps)</label>
+            <textarea id="plan" rows="3" placeholder="1. \n2. \n3."></textarea>
+        </div>
+
+        <div class="card actions">
+            <a class="btn" href="mentee-profile.html">Open Example Profile</a>
+            <a class="btn" href="index.html" style="background:#94a3b8">Back</a>
+            <div class="muted" style="margin-left:auto">Tip: copy the filled content into your notes or print this page.</div>
+        </div>
+    </main>
+</body>
+</html>
